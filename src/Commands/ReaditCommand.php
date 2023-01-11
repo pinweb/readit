@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Pinweb\Readit\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ReaditCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'readit';
 
     public $description = 'My command';
 
