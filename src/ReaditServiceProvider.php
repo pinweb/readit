@@ -1,10 +1,8 @@
 <?php
-
 namespace Pinweb\Readit;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Pinweb\Readit\Commands\ReaditCommand;
 
 class ReaditServiceProvider extends PackageServiceProvider
 {
@@ -12,8 +10,6 @@ class ReaditServiceProvider extends PackageServiceProvider
     {
         $package
             ->name('readit')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasCommand(ReaditCommand::class);
+            ->hasConfigFile();
     }
 }

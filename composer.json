@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0",
         "spatie/laravel-package-tools": "^1.13.0",
         "illuminate/contracts": "^9.0"
     },
@@ -29,6 +29,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "autoload": {
+        "files": ["src/readit_functions.php"],
         "psr-4": {
             "Pinweb\\Readit\\": "src",
             "Pinweb\\Readit\\Database\\Factories\\": "database/factories"
