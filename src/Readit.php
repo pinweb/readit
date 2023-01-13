@@ -13,7 +13,7 @@ class Readit
     public function create(string $url, ?string $watermark = null, ?string $title = null)
     {
         $query = [
-            'doc'   => config('readit.cors') . '/' . $url,
+            'doc'   => $url,
             'u'     => $watermark,
             't'     => $title
         ];
