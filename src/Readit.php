@@ -10,7 +10,7 @@ class Readit
         $this->key = config('readit.key');
     }
 
-    public function create(string $url, ?string $watermark = null, ?string $title = null)
+    public function create(string $url, ?string $title = null, ?string $watermark = null)
     {
         $query = [
             'doc'   => $url,
