@@ -20,9 +20,9 @@ class Readit
         return config('readit.reader') . '/n/' . $this->aesEncrypt(json_encode($query, 320), $this->key);
     }
 
-    public function decrypt(string $encryptData)
+    public function decrypt(string $encryptData, $return_array = false)
     {
-        return json_decode($this->aesDecrypt($encryptData, $this->key));
+        return json_decode($this->aesDecrypt($encryptData, $this->key), $return_array);
     }
 
     private function base64url_decode($data)
