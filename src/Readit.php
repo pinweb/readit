@@ -1,4 +1,5 @@
 <?php
+
 namespace Pinweb\Readit;
 
 class Readit
@@ -10,14 +11,9 @@ class Readit
         $this->key = config('readit.key');
     }
 
-    public function create(string $url, ?string $title = null, ?string $watermark = null)
+    public function create(string $url)
     {
-        $query = [
-            'doc'   => $url,
-            'u'     => $watermark,
-            't'     => $title
-        ];
-        return config('readit.reader') . '/n/' . $this->aesEncrypt(json_encode($query, 320), $this->key);
+        return config('readit.reader').'/t/'.$this->aesEncrypt($url, $this->key);
     }
 
     public function decrypt(string $encryptData, $return_array = false)

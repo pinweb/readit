@@ -3,7 +3,7 @@
 // config for Pinweb/Readit
 return [
 
-    'reader' => env('READER_URL', 'http://read.dev.pinweb.io'),
+    'reader' => env('READER_URL', 'http://readin.sht.atan.io'),
 
-    'key'    => env('READER_KEY', '')
+    'key' => env('READER_KEY', ''),
 ];
